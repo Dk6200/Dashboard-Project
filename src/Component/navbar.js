@@ -6,7 +6,7 @@ import { IoIosNotificationsOutline } from "react-icons/io";
 
 const NavBar = () => {
   return (
-    <div className="bg-gray-800 h-[5vh] lg:h-[9vh]  w-full flex justify-between items-center p-3 ">
+    <div className="bg-gray-800 h-[5vh] lg:h-[9vh] md:h[7h] w-full flex justify-between items-center p-3 ">
       <div className="flex items-center flex-grow ">
         <div className="relative flex items-center flex-grow">
           <i className="fas fa-search absolute left-3 text-white text-base md:text-lg"></i>

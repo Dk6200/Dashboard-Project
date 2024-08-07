@@ -25,7 +25,9 @@ function SideDash() {
           isOpen ? "w-40" : "w-12"
         } flex flex-col justify-between items-center fixed top-0 left-0 h-screen transition-all duration-300 z-40`}
       >
-        <div className="flex flex-col items-center mt-4 space-y-6 lg:space-y-8">
+        <div
+          className={`flex flex-col items-center mt-4 lg:mt-4 sm:mt-2 space-y-6 lg:space-y-8`}
+        >
           <img
             src={Logo}
             alt="Logo"
