@@ -51,13 +51,13 @@ const WeeklyActivityBar = () => {
   };
 
   return (
-    <div className="bg-gray-800 text-white rounded-lg relative">
-      <div className="absolute top-0 left-0 p-1">
+    <div className="bg-gray-800 text-white rounded-lg relative p-4">
+      <div className="absolute top-2 left-2 p-1">
         <span className="text-base font-semibold">Activity</span>
       </div>
-      <div className="absolute top-0 right-0 p-2">
+      <div className="absolute top-2 right-2">
         <Menu as="div" className="relative">
-          <MenuButton className="bg-gray-700 text-white px-4 py-2 rounded-lg flex items-center w-25">
+          <MenuButton className="bg-gray-700 text-white px-4 py-2 rounded-lg flex items-center">
             {selectedPeriod}
             <svg
               className="w-4 h-4 ml-2"
@@ -74,12 +74,12 @@ const WeeklyActivityBar = () => {
               ></path>
             </svg>
           </MenuButton>
-          <Menu.Items className="absolute flex flex-col w-28 text-base bg-gray-700 text-white rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none mt-2">
+          <Menu.Items className="absolute right-0 flex flex-col w-28 text-base bg-gray-700 text-white rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none mt-2">
             <Menu.Item>
               {({ active }) => (
                 <button
                   onClick={() => setSelectedPeriod("Weekly")}
-                  className={`px-4 py-2 ${active ? "bg-gray-100" : ""}`}
+                  className={`px-4 py-2 ${active ? "bg-gray-600" : ""}`}
                 >
                   Weekly
                 </button>
@@ -89,7 +89,7 @@ const WeeklyActivityBar = () => {
               {({ active }) => (
                 <button
                   onClick={() => setSelectedPeriod("Monthly")}
-                  className={`px-4 py-2 ${active ? "bg-gray-100" : ""}`}
+                  className={`px-4 py-2 ${active ? "bg-gray-600" : ""}`}
                 >
                   Monthly
                 </button>
@@ -99,7 +99,7 @@ const WeeklyActivityBar = () => {
               {({ active }) => (
                 <button
                   onClick={() => setSelectedPeriod("Yearly")}
-                  className={`px-4 py-2 ${active ? "bg-gray-100" : ""}`}
+                  className={`px-4 py-2 ${active ? "bg-gray-600" : ""}`}
                 >
                   Yearly
                 </button>
@@ -109,21 +109,37 @@ const WeeklyActivityBar = () => {
         </Menu>
       </div>
       <div className="mt-12">
-        {" "}
-        {/* Added margin-top to account for the position of the dropdown */}
         <Bar
           data={data}
           options={{
             responsive: true,
+            maintainAspectRatio: false,
             plugins: {
               legend: {
                 position: "top",
+                labels: {
+                  font: {
+                    size: 12,
+                    family: "'Inter', sans-serif",
+                    weight: "500",
+                  },
+                  color: "white",
+                },
               },
               tooltip: {
                 callbacks: {
                   label: (tooltipItem) =>
                     `${tooltipItem.dataset.label}: ${tooltipItem.raw}`,
                 },
+                bodyFont: {
+                  family: "'Inter', sans-serif",
+                },
+                titleFont: {
+                  family: "'Inter', sans-serif",
+                },
+                backgroundColor: "rgba(75, 192, 192, 0.8)",
+                titleColor: "white",
+                bodyColor: "white",
               },
             },
             scales: {
@@ -131,6 +147,12 @@ const WeeklyActivityBar = () => {
                 title: {
                   display: true,
                   text: "Week Number", // X-axis title
+                  font: {
+                    family: "'Inter', sans-serif",
+                    size: 14,
+                    weight: "500",
+                  },
+                  color: "white",
                 },
                 min: 5,
                 max: 27,
@@ -141,12 +163,24 @@ const WeeklyActivityBar = () => {
                     )
                       ? value
                       : "",
+                  font: {
+                    family: "'Inter', sans-serif",
+                    size: 12,
+                    weight: "500",
+                  },
+                  color: "white",
                 },
               },
               y: {
                 title: {
                   display: true,
                   text: "Value", // Y-axis title
+                  font: {
+                    family: "'Inter', sans-serif",
+                    size: 14,
+                    weight: "500",
+                  },
+                  color: "white",
                 },
                 suggestedMin: 0,
                 suggestedMax: 10000,
@@ -159,6 +193,12 @@ const WeeklyActivityBar = () => {
                     if (value === 15000) return "15k";
                     return "";
                   },
+                  font: {
+                    family: "'Inter', sans-serif",
+                    size: 12,
+                    weight: "500",
+                  },
+                  color: "white",
                 },
               },
             },
