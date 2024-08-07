@@ -7,13 +7,13 @@ import { IoIosNotificationsOutline } from "react-icons/io";
 const NavBar = () => {
   return (
     <div className="bg-gray-800 h-[5vh] lg:h-[9vh]  w-full flex justify-between items-center p-3 ">
-      <div className="flex items-center flex-grow max-w-md">
+      <div className="flex items-center flex-grow ">
         <div className="relative flex items-center flex-grow">
           <i className="fas fa-search absolute left-3 text-white text-base md:text-lg"></i>
           <input
             type="text"
             placeholder="Search"
-            className="p-2 pl-10 rounded bg-gray-500 text-white placeholder-white text-xs sm:text-sm md:text-base"
+            className="p-2 pl-10 rounded bg-gray-500 text-white placeholder-white text-xs sm:text-sm md:text-base w-[150px] md:w-[250px]"
           />
         </div>
       </div>
