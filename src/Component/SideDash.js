@@ -33,7 +33,7 @@ function SideDash() {
           isOpen ? "w-40" : "w-16"
         } flex flex-col justify-between items-center fixed top-0 left-0 h-screen transition-all duration-300 z-40`}
       >
-        <div className="flex flex-col space-y-8 mt-4 items-center">
+        <div className="flex flex-col items-center mt-4 space-y-6 lg:space-y-8">
           <img
             src={Logo}
             alt="Logo"
@@ -41,11 +41,37 @@ function SideDash() {
               isOpen ? "w-12 h-12" : "w-8 h-8"
             } rounded-full transition-all duration-300`}
           />
-          <IoHomeOutline className="text-white text-2xl" />
-          <IoBarChartOutline className="text-white text-2xl" />
-          <CiCalendarDate className="text-white text-2xl" />
-          <CiFileOn className="text-white text-2xl" />
-          <FiShoppingBag className="text-white text-2xl" />
+          <div
+            className={`flex flex-col items-center ${
+              isOpen ? "space-y-12" : "space-y-8"
+            }`}
+          >
+            <IoHomeOutline
+              className={`text-white ${isOpen ? "text-3xl" : "text-2xl"} ${
+                !isOpen && "mt-4"
+              }`}
+            />
+            <IoBarChartOutline
+              className={`text-white ${isOpen ? "text-3xl" : "text-2xl"} ${
+                !isOpen && "mt-4"
+              }`}
+            />
+            <CiCalendarDate
+              className={`text-white ${isOpen ? "text-3xl" : "text-2xl"} ${
+                !isOpen && "mt-4"
+              }`}
+            />
+            <CiFileOn
+              className={`text-white ${isOpen ? "text-3xl" : "text-2xl"} ${
+                !isOpen && "mt-4"
+              }`}
+            />
+            <FiShoppingBag
+              className={`text-white ${isOpen ? "text-3xl" : "text-2xl"} ${
+                !isOpen && "mt-4"
+              }`}
+            />
+          </div>
         </div>
         <div className="text-white text-2xl mb-8">
           <AiOutlineLogout />
