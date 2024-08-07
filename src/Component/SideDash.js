@@ -18,19 +18,11 @@ function SideDash() {
   return (
     <div>
       {/* Mobile Menu Button */}
-      <div className="lg:hidden fixed top-4 left-4 z-50">
-        <button
-          onClick={toggleSidebar}
-          className="text-white text-3xl focus:outline-none"
-        >
-          <AiOutlineMenu />
-        </button>
-      </div>
 
       {/* Sidebar */}
       <div
         className={`bg-gray-800 ${
-          isOpen ? "w-40" : "w-16"
+          isOpen ? "w-40" : "w-12"
         } flex flex-col justify-between items-center fixed top-0 left-0 h-screen transition-all duration-300 z-40`}
       >
         <div className="flex flex-col items-center mt-4 space-y-6 lg:space-y-8">
