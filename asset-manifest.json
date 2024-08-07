@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Dashboard-Project/static/css/main.052f00d8.css",
-    "main.js": "/Dashboard-Project/static/js/main.d436b5dc.js",
+    "main.css": "/Dashboard-Project/static/css/main.04c0029a.css",
+    "main.js": "/Dashboard-Project/static/js/main.95f57bad.js",
     "static/js/453.c66439c9.chunk.js": "/Dashboard-Project/static/js/453.c66439c9.chunk.js",
     "static/media/P1.jpg": "/Dashboard-Project/static/media/P1.aea2a379d6a4b32d6cf2.jpg",
     "static/media/profile.png": "/Dashboard-Project/static/media/profile.a69c326828dfb7f0c6c1.png",
@@ -24,12 +24,12 @@
     "static/media/fa-v4compatibility.ttf": "/Dashboard-Project/static/media/fa-v4compatibility.0f6cb412603527bda691.ttf",
     "static/media/fa-v4compatibility.woff2": "/Dashboard-Project/static/media/fa-v4compatibility.6cfec8414be20e2c3426.woff2",
     "index.html": "/Dashboard-Project/index.html",
-    "main.052f00d8.css.map": "/Dashboard-Project/static/css/main.052f00d8.css.map",
-    "main.d436b5dc.js.map": "/Dashboard-Project/static/js/main.d436b5dc.js.map",
+    "main.04c0029a.css.map": "/Dashboard-Project/static/css/main.04c0029a.css.map",
+    "main.95f57bad.js.map": "/Dashboard-Project/static/js/main.95f57bad.js.map",
     "453.c66439c9.chunk.js.map": "/Dashboard-Project/static/js/453.c66439c9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.052f00d8.css",
-    "static/js/main.d436b5dc.js"
+    "static/css/main.04c0029a.css",
+    "static/js/main.95f57bad.js"
   ]
 }
